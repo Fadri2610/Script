@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -rf .repo/local_manifests/
+rm -rf device/xiaomi/vayu
 
 # Local TimeZone
 #sudo rm -rf /etc/localtime
@@ -40,7 +41,7 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch mist_vayu-ap4a-user
+mistify vayu user
 echo "============="
 
 # Make cleaninstall
