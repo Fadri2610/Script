@@ -40,7 +40,7 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch mist_vayu-user
+lunch mist_vayu-ap4a-user
 echo "============="
 
 # Make cleaninstall
