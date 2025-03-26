@@ -8,13 +8,6 @@ rm -rf .repo/local_manifests/
 
 # Rom source repo
 repo init -u https://github.com/Project-Mist-OS/manifest -b 15 --git-lfs
-# For gms or chromium blobs related errors due to git lfs (gitlab now limits files up to 100mb max) (credits to haggertk):
-sudo apt install git-lfs
-git lfs install
-rm -rf vendor/gms
-rm -rf .repo/projects/vendor/gms.git
-rm -rf .repo/project-objects/*/android_vendor_gms.git
-repo init -u https://github.com/Project-Mist-OS/manifest -b 15 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -43,11 +36,11 @@ export BUILD_HOSTNAME=AsusROG
 echo "======= Export Done ======"
 
 # Set up build environment
-source build/envsetup.sh
+. build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-mistify vayu user
+lunch mist_vayu-user
 echo "============="
 
 # Make cleaninstall
