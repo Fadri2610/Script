@@ -2,6 +2,8 @@
 
 rm -rf .repo/local_manifests/
 rm -rf device/xiaomi/vayu
+rm -rf vendor/lineage
+mr -rf frameworks/native
 
 # Local TimeZone
 #sudo rm -rf /etc/localtime
@@ -36,12 +38,16 @@ export BUILD_USERNAME=Fabi
 export BUILD_HOSTNAME=AsusROG
 echo "======= Export Done ======"
 
-# Set up build environment
-. build/envsetup.sh
+#!/bin/bash
+export TARGET_DEVICE="vayu"
+export BUILD_VARIANT="user"
+# Set up the environment
+source build/envsetup.sh
+# Run the brunch command with dynamic variables
+brunch vayu
 echo "====== Envsetup Done ======="
 
 # Lunch
-mistify vayu user
 echo "============="
 
 # Make cleaninstall
