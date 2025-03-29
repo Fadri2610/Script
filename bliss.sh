@@ -38,8 +38,8 @@ echo "🔧 Setting up build environment..."
 source build/envsetup.sh
 
 # Build configuration
+lunch bliss_vayu-user
 blissify -g -d vayu
-
 # Clean
 echo "🧹 Running installclean..."
 make installclean
