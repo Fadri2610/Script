@@ -33,15 +33,14 @@ fi
 echo "🔄 Syncing sources..."
 /opt/crave/resync.sh
 
+# Clean
+#echo "🧹 Running installclean..."
+#make installclean
+
 # Set up build environment
 echo "🔧 Setting up build environment..."
 source build/envsetup.sh
 
 # Build configuration
 lunch bliss_vayu-user
-
-# Clean
-echo "🧹 Running installclean..."
-make installclean
-
-blissify -g -d vayu
+blissify -g vayu
