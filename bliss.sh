@@ -34,8 +34,8 @@ echo "🔄 Syncing sources..."
 /opt/crave/resync.sh
 
 # Clean
-#echo "🧹 Running installclean..."
-#make installclean
+echo "🧹 Running installclean..."
+make installclean
 
 # Set up build environment
 echo "🔧 Setting up build environment..."
