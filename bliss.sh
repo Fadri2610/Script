@@ -42,5 +42,8 @@ echo "🔧 Setting up build environment..."
 source build/envsetup.sh
 
 # Build configuration
-lunch bliss_vayu-user
+echo "🛠️ Start build configuration..."
+lunch bliss_vayu-ap4a-user
+
+echo "🚀 Start compiling..."
 blissify -g vayu
