@@ -18,7 +18,7 @@ echo "🔄 Syncing sources..."
 
 # Set up build environment
 echo "🔧 Setting up build environment..."
-source build/envsetup.sh
+. build/envsetup.sh
 
 # Clean
 #echo "🧹 Running installclean..."
@@ -28,7 +28,7 @@ source build/envsetup.sh
 export TARGET_CORE_GMS=true
 
 # Clone keys
-wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=18fq-s0tqc6nprr5GGloHOhZx07dZF3uV' -O keys.zip && unzip keys.zip && rm keys.zip && cp extra/keys/* vendor/arrow/signing/keys/ && rm -rf extra
+#wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=18fq-s0tqc6nprr5GGloHOhZx07dZF3uV' -O keys.zip && unzip keys.zip && rm keys.zip && cp extra/keys/* vendor/arrow/signing/keys/ && rm -rf extra
 
 # Build configuration
 echo "🛠️ Start build configuration..."
