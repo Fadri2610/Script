@@ -46,4 +46,4 @@ echo "🛠️ Start build configuration..."
 lunch bliss_vayu-ap4a-user
 
 echo "🚀 Start compiling..."
-blissify -g -d vayu
+blissify -v -d vayu
