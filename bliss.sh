@@ -38,12 +38,12 @@ echo "🔧 Setting up build environment..."
 source build/envsetup.sh
 
 # Clean
-echo "🧹 Running installclean..."
-make installclean
+#echo "🧹 Running installclean..."
+#make installclean
 
 # Build configuration
 echo "🛠️ Start build configuration..."
 lunch bliss_vayu-ap4a-user
 
 echo "🚀 Start compiling..."
-blissify -g vayu
+blissify -v -d vayu
