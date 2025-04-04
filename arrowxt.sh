@@ -20,10 +20,6 @@ echo "🔄 Syncing sources..."
 echo "🔧 Setting up build environment..."
 . build/envsetup.sh
 
-# Clean
-#echo "🧹 Running installclean..."
-#make installclean
-
 # Enable core GApps
 export TARGET_CORE_GMS=true
 
@@ -33,6 +29,9 @@ export TARGET_CORE_GMS=true
 # Build configuration
 echo "🛠️ Start build configuration..."
 lunch arrow_vayu-user
+# Clean
+echo "🧹 Running installclean..."
+make deviceclean
 
 echo "🚀 Start compiling..."
 m bacon
