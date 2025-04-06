@@ -1,5 +1,4 @@
 echo "🗑️ Removing old parts directories..."
-device_codename=vayu
 rm -rf .repo/local_manifests/
 rm -rf device/xiaomi
 rm -rf kernel/xiaomi
@@ -24,7 +23,7 @@ echo "🔧 Setting up build environment..."
 # Build configuration (Set build type)
 echo "🛠️ Start build configuration..."
 # lunch alpha_$device_codename-eng    # For bring-up
-lunch alpha_$device_codename-userdebug  # For testing  
+lunch alpha_vayu-userdebug  # For testing  
 # lunch alpha_$device_codename-user       # For release
 
 # Clean
