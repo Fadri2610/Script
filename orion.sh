@@ -42,4 +42,4 @@ echo -e "\n
 \n"
 
 echo "🚀 Start compiling..."
-make orion -j$(nproc --all)
+make orion
