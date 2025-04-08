@@ -10,7 +10,7 @@ repo init -u https://github.com/OrionOS-Project/manifest -b vic --git-lfs
 
 # Clone local_manifests repository
 echo "Cloning local_manifests..."
-git clone --depth=1 https://github.com/Fadri2610/bagaskara_local_manifests.git -b orion .repo/local_manifests
+git clone --depth=1 -b orion https://github.com/Fadri2610/bagaskara_local_manifests.git .repo/local_manifests
 echo "✅ local_manifests cloned successfully."
 
 # repo sync
@@ -28,8 +28,8 @@ export ORION_GAPPS=true
 export TARGET_BOOT_ANIMATION_RES=1080
 
 # Clean
-echo "🧹 Running clean..."
-make deviceclean
+#echo "🧹 Running clean..."
+#make deviceclean
 
 # Build configuration
 echo "🛠️ Start build configuration..."
