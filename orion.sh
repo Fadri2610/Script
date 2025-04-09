@@ -3,6 +3,7 @@ rm -rf .repo/local_manifests/
 rm -rf device/xiaomi
 rm -rf kernel/xiaomi
 rm -rf vendor/xiaomi
+rm -rf /tmp/src/android
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
