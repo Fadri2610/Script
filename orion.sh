@@ -3,12 +3,11 @@ rm -rf .repo/local_manifests/
 rm -rf device/xiaomi
 rm -rf kernel/xiaomi
 rm -rf vendor/xiaomi
-rm -rf /tmp/src/android
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
 repo init -u https://github.com/Fadri2610/orion_manifest.git -b vic --git-lfs
-
+repo sync -d -f
 # Clone local_manifests repository
 echo "Cloning local_manifests..."
 git clone --depth=1 -b orion https://github.com/Fadri2610/bagaskara_local_manifests.git .repo/local_manifests
