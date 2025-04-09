@@ -1,5 +1,6 @@
 echo "🗑️ Removing old parts directories..."
 rm -rf .repo/local_manifests/
+rm -rf .repo
 rm -rf device/xiaomi
 rm -rf kernel/xiaomi
 rm -rf vendor/xiaomi
@@ -7,6 +8,13 @@ rm -rf vendor/xiaomi
 # Clone ROM source
 echo "📦 Cloning ROM source..."
 repo init -u https://github.com/Fadri2610/orion_manifest.git -b vic --git-lfs
+
+echo -e "\n
+   ╔════════════════════════╗
+   ║     OrionOS Project    ║
+   ╚════════════════════════╝
+\n"
+
 # Clone local_manifests repository
 echo "Cloning local_manifests..."
 git clone --depth=1 -b orion https://github.com/Fadri2610/bagaskara_local_manifests.git .repo/local_manifests
@@ -33,12 +41,6 @@ make deviceclean
 # Build configuration
 echo "🛠️ Start build configuration..."
 lunch orion_vayu-ap4a-userdebug
-
-echo -e "\n
-   ╔════════════════════════╗
-   ║     OrionOS Project    ║
-   ╚════════════════════════╝
-\n"
 
 echo "🚀 Start compiling..."
 make orion -j$(nproc --all)
