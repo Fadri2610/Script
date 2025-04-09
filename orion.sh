@@ -1,19 +1,19 @@
 echo "🗑️ Removing old parts directories..."
-rm -rf .repo/local_manifests/
-rm -rf .repo
-rm -rf device/xiaomi
-rm -rf kernel/xiaomi
-rm -rf vendor/xiaomi
+rm -rf \
+    .repo/local_manifests/ \
+    .repo \
+    device/xiaomi \
+    kernel/xiaomi \
+    vendor/xiaomi
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
-repo init -u https://github.com/Fadri2610/orion_manifest.git -b vic --git-lfs
-
 echo -e "\n
    ╔════════════════════════╗
    ║     OrionOS Project    ║
    ╚════════════════════════╝
 \n"
+repo init -u https://github.com/Fadri2610/orion_manifest.git -b vic --git-lfs
 
 # Clone local_manifests repository
 echo "Cloning local_manifests..."
