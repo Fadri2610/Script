@@ -6,7 +6,7 @@ rm -rf vendor/xiaomi
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
-repo init -u https://github.com/OrionOS-Project/manifest -b vic --git-lfs
+repo init -u https://github.com/Fadri2610/orion_manifest.git -b vic --git-lfs
 
 # Clone local_manifests repository
 echo "Cloning local_manifests..."
