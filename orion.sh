@@ -2,10 +2,10 @@ echo "🗑️ Removing old parts directories..."
 # WARNING: .repo/manifests/ is critical (only delete if intentional!)
 rm -rf \
     .repo/local_manifests/ \
-    .repo/manifests/ \
+    #.repo/manifests/ \
+    #device/xiaomi \
     kernel/xiaomi \
     vendor/xiaomi
-#    device/xiaomi \
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
