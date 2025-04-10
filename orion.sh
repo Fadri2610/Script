@@ -3,9 +3,9 @@ echo "🗑️ Removing old parts directories..."
 rm -rf \
     .repo/local_manifests/ \
     .repo/manifests/ \
-    device/xiaomi \
     kernel/xiaomi \
     vendor/xiaomi
+#    device/xiaomi \
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
