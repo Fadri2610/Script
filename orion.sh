@@ -36,8 +36,8 @@ export ORION_GAPPS=true
 export TARGET_BOOT_ANIMATION_RES=1080
 
 # Clean
-echo "🧹 Running clean..."
-make deviceclean
+#echo "🧹 Running clean..."
+#make deviceclean
 
 # Build configuration
 echo "🛠️ Start build configuration..."
