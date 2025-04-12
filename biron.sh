@@ -20,7 +20,9 @@ echo "🔄 Syncing sources..."
 # Enable pico GApps
 export WITH_GMS=true
 export WITH_GMS_VARIANT=pico
-
+export BLACKIRON_BUILDTYPE=UNOFFICIAL
+export BLACKIRON_MAINTAINER=Fabi
+export TARGET_ENABLE_BLUR=false
 # Set up build environment
 echo "🔧 Setting up build environment..."
 . build/envsetup.sh
