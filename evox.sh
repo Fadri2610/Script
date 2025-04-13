@@ -1,51 +1,37 @@
-#!/bin/bash
-
+echo "🗑️ Removing old parts directories..."
 rm -rf .repo/local_manifests/
+rm -rf device/xiaomi
+rm -rf kernel/xiaomi
+rm -rf vendor/xiaomi
 
-# Local TimeZone
-sudo rm -rf /etc/localtime
-sudo ln -s /usr/share/zoneinfo/Asia/India /etc/localtime
+# Clone ROM source
+echo "📦 Cloning ROM source..."
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 
-# Rom source repo
-repo init -u https://github.com/Evolution-X/manifest -b vic-qpr1 --git-lfs
-echo "=================="
-echo "Repo init success"
-echo "=================="
+# Clone repos
+echo "🔹 Cloning repositories..."
+git clone --depth=1 -b evox https://github.com/Fadri2610/build_roomservice.git .repo/local_manifests
+echo "✅ Cloning completed!"
 
-# Clone local_manifests repository
-git clone -b Evo-15 https://github.com/Sachinpawar86/local_manifests .repo/local_manifests
-echo "============================"
-echo "Local manifest clone success"
-echo "============================"
-
-# Signed Keys
-crave ssh && git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys && cd vendor/evolution-priv/keys && ./keys.sh && exit
-
-# Clone Gapps
-rm -rf vendor/gms
-rm -rf vendor/gapps
-git clone https://gitlab.com/sachinbarange86/vendor_gapps_axion.git -b vic vendor/gapps
-
-# Sync the repositories
+# repo sync
+echo "🔄 Syncing sources..."
 /opt/crave/resync.sh
-echo "============================"
-
-# Export
-export BUILD_USERNAME=Sachin
-export BUILD_HOSTNAME=crave
-echo "======= Export Done ======"
 
 # Set up build environment
-source build/envsetup.sh
-echo "====== Envsetup Done ======="
+echo "🔧 Setting up build environment..."
+. build/envsetup.sh
 
-# Lunch
-lunch lineage_mojito-ap4a-user
-echo "============="
+# Build configuration (first time)
+echo "🛠️ Start build configuration..."
+lunch lineage_vayu-bp1a-userdebug
 
-# Make cleaninstall
-make installclean
-echo "============="
+# Run clean
+echo "🧹 Running deviceclean..."
+make deviceclean
 
-# Build rom
+# Since <>clean may wipe some setup, re-run lunch to be safe
+echo "🛠️ Re-setting build configuration..."
+lunch lineage_vayu-bp1a-userdebug
+
+echo "🚀 Start compiling..."
 m evolution
