@@ -29,9 +29,5 @@ lunch lineage_vayu-bp1a-userdebug
 echo "🧹 Running deviceclean..."
 make deviceclean
 
-# Since <>clean may wipe some setup, re-run lunch to be safe
-echo "🛠️ Re-setting build configuration..."
-lunch lineage_vayu-bp1a-userdebug
-
 echo "🚀 Start compiling..."
 m evolution
