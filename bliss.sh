@@ -6,7 +6,7 @@ rm -rf vendor/xiaomi
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
-repo init -u https://github.com/BlissRoms/stable_releases.git -b refs/tags/v18.4-stable-voyager --git-lfs
+repo init -u https://github.com/BlissRoms/stable_releases.git -b refs/tags/v18.5-stable-voyager --git-lfs
 
 # Clone local_manifests repository
 echo "Cloning local_manifests..."
@@ -43,7 +43,7 @@ source build/envsetup.sh
 
 # Build configuration
 echo "🛠️ Start build configuration..."
-lunch bliss_vayu-ap4a-user
+lunch lineage_vayu-bp1a-user
 
 echo "🚀 Start compiling..."
 blissify -v -d vayu
