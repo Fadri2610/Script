@@ -2,7 +2,7 @@ echo "🗑️ Removing old parts directories..."
 rm -rf .repo/local_manifests/
 rm -rf device/xiaomi
 rm -rf kernel/xiaomi
-rm -rf vendor/xiaomi
+#rm -rf vendor/xiaomi
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
@@ -21,13 +21,13 @@ echo "🔄 Syncing sources..."
 echo "🔧 Setting up build environment..."
 . build/envsetup.sh
 
-# Build configuration (first time)
-echo "🛠️ Start build configuration..."
-lunch lineage_vayu-bp1a-userdebug
-
 # Run clean
 echo "🧹 Running deviceclean..."
 make deviceclean
+
+# Build configuration (first time)
+echo "🛠️ Start build configuration..."
+lunch lineage_vayu-bp1a-userdebug
 
 echo "🚀 Start compiling..."
 m evolution
