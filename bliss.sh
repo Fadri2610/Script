@@ -2,7 +2,7 @@ echo "🗑️ Removing old parts directories..."
 rm -rf .repo/local_manifests/
 rm -rf device/xiaomi
 rm -rf kernel/xiaomi
-rm -rf vendor/xiaomi
+#rm -rf vendor/xiaomi
 
 # Clone ROM source
 echo "📦 Cloning ROM source..."
@@ -46,4 +46,4 @@ echo "🛠️ Start build configuration..."
 lunch lineage_vayu-bp1a-user
 
 echo "🚀 Start compiling..."
-blissify -v -d vayu
+blissify vayu
