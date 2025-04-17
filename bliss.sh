@@ -46,4 +46,4 @@ echo "🛠️ Start build configuration..."
 lunch lineage_vayu-bp1a-user
 
 echo "🚀 Start compiling..."
-blissify vayu
+blissify -d vayu
