@@ -22,7 +22,7 @@ export GENESIS_MAINTAINER=Fabi
 
 # Set up build environment
 echo "🔧 Setting up build environment..."
-. build/envsetup.sh
+source build/envsetup.sh
 
 # Build configuration
 echo "🛠️ Start build configuration..."
