@@ -10,7 +10,7 @@ repo init -u https://github.com/GenesisOS/manifest.git -b verve-qpr2 --git-lfs
 
 # Clone repos
 echo "🔹 Cloning repositories..."
-git clone --depth=1 -b genos https://github.com/Fadri2610/build_roomservice.git .repo/local_manifests
+git clone --depth=1 -b genos https://github.com/Fadri2610/bagaskara_local_manifests.git .repo/local_manifests
 echo "✅ Cloning completed!"
 
 # repo sync
